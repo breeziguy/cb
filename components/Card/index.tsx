@@ -10,7 +10,7 @@ type CardProps = {
         id: number;
         name: string;
     };
-    selectOnChange?: (value: { id: number; name: string }) => void;
+    selectOnChange?: (value: { id: number; name: string } | null) => void;
     headContent?: React.ReactNode;
 };
 
@@ -24,13 +24,15 @@ const Card = ({
     children,
     headContent,
 }: CardProps) => (
-    <div className={`card ${className || ""}`}>
+    <div
+        className={`card${className ? ` ${className}` : ""}`}
+    >
         <div
-            className={`flex items-center h-12 pl-5 max-lg:pl-3 ${
-                classHead || ""
+            className={`flex justify-between items-center${
+                classHead ? ` ${classHead}` : ""
             }`}
         >
-            <div className="mr-auto text-h6">{title}</div>
+            <div className="text-sub-title-1">{title}</div>
             {headContent}
             {selectOptions && selectValue && selectOnChange && (
                 <Select
@@ -44,5 +46,7 @@ const Card = ({
         <div className="pt-3">{children}</div>
     </div>
 );
+
+Card.displayName = "Card";
 
 export default Card;

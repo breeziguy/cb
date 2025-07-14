@@ -50,7 +50,9 @@ const Filters = ({}) => {
                                 label="Category"
                                 tooltip="Maximum 100 characters. No HTML or emoji allowed"
                                 value={category}
-                                onChange={setCategory}
+                                onChange={(value) => {
+                                    if (value) setCategory(value);
+                                }}
                                 options={categories}
                             />
                         </div>
@@ -60,7 +62,9 @@ const Filters = ({}) => {
                                 label="Rating"
                                 tooltip="Maximum 100 characters. No HTML or emoji allowed"
                                 value={rating}
-                                onChange={setRating}
+                                onChange={(value) => {
+                                    if (value) setRating(value);
+                                }}
                                 options={ratings}
                             />
                         </div>
