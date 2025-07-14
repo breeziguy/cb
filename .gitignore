@@ -48,7 +48,7 @@ next-env.d.ts
 /node_modules/
 backup copy/
 admin-copy/
-templates/
+# templates/ - needed for app, uncommenting
 
 # Other backup and unnecessary files
 contstants/

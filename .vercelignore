@@ -1,0 +1,33 @@
+# Large folders that shouldn't be deployed
+migrations/
+backup copy/
+# templates/ - needed for app, uncommenting  
+admin-copy/
+contstants/
+creator image/
+
+# Documentation files
+*.md
+!README.md
+*.csv
+*.json
+!package.json
+!package-lock.json
+!yarn.lock
+
+# Individual documentation files  
+creators-to-revisit.md
+creators-import.json
+BACKUP_PAGE_TITLES.md
+IMAGE_UPLOAD_TODO.md
+TODO_BRIEF_MESSAGING.md
+POST_LAUNCH_ROADMAP.md
+WALLET_TODO.md
+COLLABS_PLAN.md
+SUPABASE_SETUP.md
+index.html
+.cursor/
+
+# Files that don't affect deployment
+Untitled form copy.csv
+Untitled form.csv 
