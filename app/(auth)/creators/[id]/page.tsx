@@ -1,12 +1,12 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import Layout from "@/components/Layout";
-import Icon from "@/components/Icon";
-import Button from "@/components/Button";
-import CreatorProfilePage from "@/templates/CreatorProfilePage";
-import CreatorProfileSkeleton from "@/components/CreatorProfileSkeleton";
-import { useCreator } from "@/hooks/useCreators";
+import Layout from "../../../../components/Layout";
+import Icon from "../../../../components/Icon";
+import Button from "../../../../components/Button";
+import CreatorProfilePage from "../../../../templates/CreatorProfilePage";
+import CreatorProfileSkeleton from "../../../../components/CreatorProfileSkeleton";
+import { useCreator } from "../../../../hooks/useCreators";
 
 const CreatorPage = () => {
     const params = useParams();
